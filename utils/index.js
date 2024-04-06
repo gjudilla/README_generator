@@ -1,8 +1,8 @@
 // TODO: Include packages needed for this application
-const inquirer = require('inquirer');
 const fs = require('fs');
-
-const generateReadMe = require('./utils/generateMarkdown.js');
+const inquirer = require('inquirer');
+const path = require('path');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 
 // TODO: Create an array of questions for user input
@@ -61,27 +61,18 @@ const questions = [
       },
 ]; 
 
-// return inquirer.prompt ([
-//     {}
-// ])
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+}
 
 // TODO: Create a function to initialize app
 function init() {
-    try {
-      console.log('Welcome to the README Generator!\nPlease provide some information:');
-      const userData = await promptUser();
-      const generatedHTML = generateHTML(userData);
-  
-      // Write generated HTML to a file
-      fs.writeFileSync('portfolio.html', generatedHTML);
-      console.log('Portfolio generated successfully! Check portfolio.html');
-    } catch (error) {
-      console.error('Something went wrong:', error);
-    }
-  }
-
+    inquirer.prompt(questions).then((responses) => {
+    console.log("Generating README.md file...");
+    writeToFile("./example/README.md", generateMarkdown({...responses}));
+});
+}
 // Function call to initialize app
 init();
