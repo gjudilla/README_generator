@@ -4,7 +4,7 @@
 
 This README generator is an easy-to-use, Node.js run command-line application that allows users to quickly produce READ.md files for personal projects. 
 
-Demo video: 
+Demo video: https://drive.google.com/file/d/1c55hbimpZmJffC-p4p6tAC_jrz_6fSXS/view
 
 
 ## Installation

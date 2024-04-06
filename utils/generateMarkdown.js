@@ -43,7 +43,6 @@ function generateMarkdown(data) {
   [Credits](#credits)
   [Contribution](#contribution)
   [Tests](#tests)
-  [License](#license)
   [Questions](#questions)
 
   ${renderLicenseLink(data.license)}
@@ -62,7 +61,6 @@ function generateMarkdown(data) {
   ## Tests
   ${data.tests}
 
-  ## License 
   ${renderLicenseSection(data.license)}
   
   ## Questions
@@ -71,8 +69,7 @@ function generateMarkdown(data) {
 2. Email me at: <${data.email}>`;
 }
 
-module.exports = {
-  generateMarkdown
-};
+module.exports = generateMarkdown;
+
 
 
