@@ -68,9 +68,6 @@ function init() {
 }
 
 // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-//   return fs.writeFileSync(path.join(process.cwd(), fileName), data);
-// }
 function writeToFile(data) {
     fs.writeFile('./example/README.md', generateMarkdown(data), (err) =>
         err ? console.log(err) : console.log('Successfully created README.md!')
@@ -78,12 +75,7 @@ function writeToFile(data) {
 }
 
 // TODO: Create a function to initialize app
-// function init() {
-//     inquirer.prompt(questions).then((responses) => {
-//         console.log("Generating README.md file...");
-//         // Remove the curly braces around responses
-//         writeToFile("./example/README.md", generateMarkdown(responses));
-//     });
-// }
+// See code above. 
+
 // Function call to initialize app
 init();
