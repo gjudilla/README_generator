@@ -1,5 +1,5 @@
 # README generator
-  [Github license](https://img.shields.io/badge/license-MIT-yellowgreen.svg)
+  ![Github license](https://img.shields.io/badge/license-MIT-yellowgreen.svg)
   ## Description
   a simple command line tool to create README files
   
